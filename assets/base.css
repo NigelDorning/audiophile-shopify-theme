@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+/* Theme Properties */
+:root {
+    /* Colours */
+    --raw-sienna: 216, 125, 74;
+    --cod-gray: 16, 16, 16;
+    --seashell: 241, 241, 241;
+    --alabaster: 250, 250, 250;
+    --hit-pink: 251, 175, 133;
+    --white: 255, 255, 255;
+    --black: 0, 0, 0;
+
+    /* Borders */
+    --border-radius: 8px;
+
+    /* Media Query Breakpoints */
+    --tablet: 768px;
+    --desktop: 1440px;
+}
+
+/* Global */
+html,
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.overline,
+.subtitle {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 58px;
+    line-height: 58px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+}
+
+h4 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+}
+
+h5 {
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1.7px;
+}
+
+h6 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+}
+
+.overline {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 10px;
+}
+
+.subtitle {
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.button {
+    font-weight: 700;
+    font-size: 13px;
+    color: white;
+    background-color: rgba(var(--raw-sienna), 1);
+    padding: 1rem 2rem;
+}
+
+.button:hover {
+    background-color: rgba(var(--hit-pink), 1);
+}
+
+.button--outline {
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.button--outline:hover {
+    color: white;
+    background-color: black;
+}
+
+.button--link {
+    color: black;
+    background-color: transparent;
+}
+
+.button--link:hover {
+    color: rgba(var(--raw-sienna), 1);
+}
+
+/* Form Elements */
+input,
+input::placeholder {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+input {
+    padding: 1rem;
+    border: 1px solid rgba(var(--seashell), 1);
+    border-radius: 8px;
+}
