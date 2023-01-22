@@ -1,0 +1,82 @@
+<div class="footer__inner container">
+
+    <div class="footer__top">
+        <a href="/">
+            <img src="{{ 'logo.svg' | asset_url }}" alt="Audiophile logo">
+        </a>
+        <ul class="footer__menu">
+            {% for link in section.settings.footer_menu.links %}
+                <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <p class="footer__about">{{ section.settings.about }}</p>
+
+    <div class="footer__bottom">
+        <p class="footer__copyright">
+            Copyright 2023. All Rights Reserved
+        </p>
+        <div>
+            <ul class="footer__social-media">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'social_media' %}
+                            <li>
+                                <a href="{{ block.settings.link }}">
+                                    {% assign icon = block.settings.name | downcase %}
+                                    {% render 'icons', icon: icon  %}
+                                </a>
+                            </li>
+                    {% endcase %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Footer",
+    "tag": "footer",
+    "settings": [
+        {
+            "label": "Footer Menu",
+            "id": "footer_menu",
+            "type": "link_list"
+        },
+        {
+            "label": "About",
+            "id": "about",
+            "type": "textarea"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Social Media",
+            "type": "social_media",
+            "settings": [
+                {
+                    "label": "Name",
+                    "id": "name",
+                    "type": "text"
+                },
+                {
+                    "label": "Link",
+                    "id": "link",
+                    "type": "url"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Footer"
+        }
+    ]
+}
+{% endschema %}

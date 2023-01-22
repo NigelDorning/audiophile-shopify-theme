@@ -3,15 +3,23 @@
     "3b7e9850-3c66-49a4-831c-54e7e2eff622": {
       "type": "product-hero",
       "settings": {
-        "heading": "",
-        "title": "",
-        "description": "",
+        "heading": "NEW PRODUCT",
+        "title": "XX99 Mark II HeadphoneS",
+        "description": "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.",
         "link": "",
-        "bg_mobile": "shopify:\/\/shop_images\/image-header.jpg"
+        "bg_mobile": "shopify:\/\/shop_images\/image-header.jpg",
+        "bg_tablet": "shopify:\/\/shop_images\/image-header_75fb3563-7f8c-4132-a379-cf9f5b15957a.jpg",
+        "bg_desktop": "shopify:\/\/shop_images\/image-hero.jpg"
+      }
+    },
+    "0b9c1c1e-d5a2-4d23-96e2-5e0fd086bb2e": {
+      "type": "default",
+      "settings": {
       }
     }
   },
   "order": [
-    "3b7e9850-3c66-49a4-831c-54e7e2eff622"
+    "3b7e9850-3c66-49a4-831c-54e7e2eff622",
+    "0b9c1c1e-d5a2-4d23-96e2-5e0fd086bb2e"
   ]
 }
