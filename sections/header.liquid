@@ -1,0 +1,52 @@
+<div class="header__inner container">
+    <button class="header__trigger">
+        <img src="{{ 'icon-hamburger.svg' | asset_url }}" alt="Mobile menu icon">
+    </button>
+    
+    <div class="header__brand">
+        <a href="/">
+            <img src="{{ 'logo.svg' | asset_url }}" alt="Audiophile logo">
+        </a>
+    </div>
+    
+    <ul class="main-menu">
+        {% for link in section.settings.main_menu.links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ routes.cart_url }}" class="header__cart">
+        <img src="{{ 'icon-cart.svg' | asset_url }}" alt="Cart icon">
+    </a>
+    
+    <div class="header__mobile-menu header__mobile-menu--hidden">
+        <ul>
+            {% for link in section.settings.main_menu.links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div class="header__overlay"></div>
+
+{{ 'header.css' | asset_url | stylesheet_tag }}
+{{ 'header.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+    "name": "Header",
+    "tag": "header",
+    "settings": [
+        {
+            "type": "link_list",
+            "id": "main_menu",
+            "label": "Main Menu"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Header"
+        }
+    ]
+}
+{% endschema %}

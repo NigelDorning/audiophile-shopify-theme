@@ -12,7 +12,8 @@
 
     <title>Document</title>
 </head>
-<body>
+<body class="template-{{ template.name }}">
+    {% section 'header' %}
     <main>
         {{ content_for_layout }}
     </main>

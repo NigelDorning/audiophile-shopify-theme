@@ -1,12 +1,17 @@
 {
   "sections": {
-    "default": {
-      "type": "default",
+    "3b7e9850-3c66-49a4-831c-54e7e2eff622": {
+      "type": "product-hero",
       "settings": {
+        "heading": "",
+        "title": "",
+        "description": "",
+        "link": "",
+        "bg_mobile": "shopify:\/\/shop_images\/image-header.jpg"
       }
     }
   },
   "order": [
-    "default"
+    "3b7e9850-3c66-49a4-831c-54e7e2eff622"
   ]
 }

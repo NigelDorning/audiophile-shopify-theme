@@ -1,0 +1,83 @@
+<div class="product__inner container">
+
+    <picture>
+        <source
+            media="(min-width: 992px)"
+            srcset="{{ section.settings.bg_desktop | image_url }}">
+    
+        <source
+            media="(min-width: 576px)"
+            srcset="{{ section.settings.bg_tablet | image_url }}">
+    
+        <img
+            src="{{ section.settings.bg_mobile | image_url }}"
+            alt="{{ section.settings.bg_mobile.alt }}"
+            class="product-hero__bg">
+    </picture>
+
+    <div class="product-hero__content">
+        <h1>{{ section.settings.title }}</h1>
+        <h2 class="overline">{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.description }}</p>
+        <div>
+            <a href="{{ section.settings.link }}" class="button">See Product</a>
+        </div>
+    </div>
+
+</div>
+
+{{ 'product-hero.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Product Hero",
+    "tag": "section",
+    "class": "product-hero",
+    "settings": [
+        {
+            "label": "Heading",
+            "id": "heading",
+            "type": "text"
+        },
+        {
+            "label": "Title",
+            "id": "title",
+            "type": "text"
+        },
+        {
+            "label": "Description",
+            "id": "description",
+            "type": "textarea"
+        },
+        {
+            "label": "Link",
+            "id": "link",
+            "type": "url"
+        },
+        {
+            "type": "header",
+            "content": "Background images"
+        },
+        {
+            "label": "Background Mobile",
+            "id": "bg_mobile",
+            "type": "image_picker"
+        },
+        {
+            "label": "Background Table",
+            "id": "bg_tablet",
+            "type": "image_picker"
+        },
+        {
+            "label": "Background Desktop",
+            "id": "bg_desktop",
+            "type": "image_picker"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Hero"
+        }
+    ]
+}
+{% endschema %}
