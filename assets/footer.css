@@ -52,6 +52,10 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
+    .footer__inner {
+        padding: 4rem 0;
+    }
+
     .footer__top {
         flex-direction: row;
         align-items: center;
