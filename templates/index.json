@@ -12,14 +12,19 @@
         "bg_desktop": "shopify:\/\/shop_images\/image-hero.jpg"
       }
     },
-    "0b9c1c1e-d5a2-4d23-96e2-5e0fd086bb2e": {
-      "type": "default",
+    "70e72e84-eb76-46c7-b655-7f1a8257769c": {
+      "type": "featured-collections",
       "settings": {
+        "collections": [
+          "headphones",
+          "speakers",
+          "earphones"
+        ]
       }
     }
   },
   "order": [
     "3b7e9850-3c66-49a4-831c-54e7e2eff622",
-    "0b9c1c1e-d5a2-4d23-96e2-5e0fd086bb2e"
+    "70e72e84-eb76-46c7-b655-7f1a8257769c"
   ]
 }

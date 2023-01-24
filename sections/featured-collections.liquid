@@ -1,0 +1,42 @@
+<div class="featured-collections__inner container">
+    {% for collection in section.settings.collections %}
+        <div class="featured_collections__item">
+            <img 
+                src="{{ collection.featured_image.src | image_url }}" 
+                alt="{{ collection.featured_image.alt }}"
+            >
+
+            <div class="item__content">
+                <div>
+                    <h2>{{ collection.title }}</h2>
+                    <a
+                        href="{{ collection.url }}"
+                        class="button button--link"
+                    >Shop</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{{ 'featured-collections.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Featured Collections",
+    "tag": "section",
+    "class": "featured-collections",
+    "settings": [
+        {
+            "label": "Collections",
+            "id": "collections",
+            "type": "collection_list"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Featured Collections"
+        }
+    ]
+}
+{% endschema %}

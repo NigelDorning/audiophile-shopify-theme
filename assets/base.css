@@ -99,6 +99,7 @@ h6 {
     color: white;
     background-color: rgba(var(--raw-sienna), 1);
     padding: 1rem 2rem;
+    text-transform: uppercase;
 }
 
 .button:hover {
@@ -117,12 +118,23 @@ h6 {
 }
 
 .button--link {
-    color: black;
+    color: rgba(var(--black), .5);
     background-color: transparent;
+    padding: 0;
 }
 
 .button--link:hover {
     color: rgba(var(--raw-sienna), 1);
+    background-color: transparent;
+}
+
+.button--link::after {
+    content: url('./icon-arrow-right.svg');
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 8px;
+    margin-top: 4px;
 }
 
 /* Form Elements */
