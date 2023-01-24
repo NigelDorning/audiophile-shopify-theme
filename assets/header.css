@@ -1,5 +1,5 @@
 header {
-    background-color: rgba(var(--black), 1);
+    background-color: rgb(var(--cod-gray));
 }
 
 .template-index header {
