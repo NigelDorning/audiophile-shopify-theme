@@ -16,6 +16,10 @@
 }
 
 /* Global */
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     font-family: 'Manrope', sans-serif;
@@ -98,7 +102,7 @@ h6 {
     font-size: 13px;
     color: white;
     background-color: rgba(var(--raw-sienna), 1);
-    padding: 1rem 2rem;
+    padding: .75rem 2rem;
     text-transform: uppercase;
 }
 
@@ -109,7 +113,7 @@ h6 {
 .button--outline {
     color: black;
     border: 1px solid black;
-    background-color: white;
+    background-color: transparent;
 }
 
 .button--outline:hover {
@@ -135,6 +139,11 @@ h6 {
     height: 8px;
     margin-left: 8px;
     margin-top: 4px;
+}
+
+.button--black {
+    background-color: rgb(var(--black));
+    color: white;
 }
 
 /* Form Elements */

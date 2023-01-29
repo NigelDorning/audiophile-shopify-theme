@@ -1,0 +1,165 @@
+<div class="featured-products__inner container">
+
+    {% comment %} Product One {% endcomment %}
+    <div class="featured-products__one">
+        <div class="product-one__content">
+            <img
+                src="{{ section.settings.product_1_image.src | image_url }}"
+                alt="{{ section.settings.product_1_image.alt }}"
+            >
+            <div class="product-one__copy">
+                <h2>{{ section.settings.product_1.title }}</h2>
+                <p>{{ section.settings.copy }}</p>
+                <div>
+                    <a
+                        href="{{ section.settings.product_1.url }}"
+                        class="button button--black"
+                    >See Product</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% comment %} Product Two {% endcomment %}
+    <div class="featured-products__two">
+        <picture>
+            <source 
+                media="(min-width: 992px)" 
+                srcset="{{ section.settings.background_2_desktop.src | image_url }}">
+
+            <source 
+                media="(min-width: 576px)" 
+                srcset="{{ section.settings.background_2_tablet.src | image_url }}">
+
+            <img 
+                src="{{ section.settings.background_2_mobile.src | image_url }}" 
+                alt="{{ section.settings.background_2_mobile.alt }}"
+            >
+        </picture>
+
+        <div class="product-two__content">
+            <h2>{{ section.settings.product_2.title }}</h2>
+            <div>
+                <a
+                    href="{{ section.settings.product_2.url }}"
+                    class="button button--outline"
+                >See Product</a>
+            </div>
+        </div>
+    </div>
+
+    {% comment %} Product Three {% endcomment %}
+    <div class="featured-products__three">
+        <picture>
+            <source 
+                media="(min-width: 992px)" 
+                srcset="{{ section.settings.background_3_desktop.src | image_url }}">
+
+            <source 
+                media="(min-width: 576px)" 
+                srcset="{{ section.settings.background_3_tablet.src | image_url }}">
+
+            <img 
+                src="{{ section.settings.background_3_mobile.src | image_url }}" 
+                alt="{{ section.settings.background_3_mobile.alt }}"
+            >
+        </picture>
+
+        <div class="product-three__content">
+            <h2>{{ section.settings.product_3.title }}</h2>
+            <div>
+                <a
+                    href="{{ section.settings.product_3.url }}"
+                    class="button button--outline"
+                >See Product</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{ 'featured-products.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Featured Products",
+    "tag": "section",
+    "class": "featured-products",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Product One"
+        },
+        {
+            "label": "Product Image",
+            "id": "product_1_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Product",
+            "id": "product_1",
+            "type": "product"
+        },
+        {
+            "label": "Copy",
+            "id": "copy",
+            "type": "textarea"
+        },
+
+        {
+            "type": "header",
+            "content": "Product Two"
+        },
+        {
+            "label": "Background Image (mobile)",
+            "id": "background_2_mobile",
+            "type": "image_picker"
+        },
+        {
+            "label": "Background Image (tablet)",
+            "id": "background_2_tablet",
+            "type": "image_picker"
+        },
+        {
+            "label": "Background Image (desktop)",
+            "id": "background_2_desktop",
+            "type": "image_picker"
+        },
+        {
+            "label": "Product",
+            "id": "product_2",
+            "type": "product"
+        },
+
+        {
+            "type": "header",
+            "content": "Product Three"
+        },
+        {
+            "label": "Background Image (mobile)",
+            "id": "background_3_mobile",
+            "type": "image_picker"
+        },
+        {
+            "label": "Background Image (tablet)",
+            "id": "background_3_tablet",
+            "type": "image_picker"
+        },
+        {
+            "label": "Background Image (desktop)",
+            "id": "background_3_desktop",
+            "type": "image_picker"
+        },
+        {
+            "label": "Product",
+            "id": "product_3",
+            "type": "product"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Featured Products"
+        }
+    ]
+}
+{% endschema %}

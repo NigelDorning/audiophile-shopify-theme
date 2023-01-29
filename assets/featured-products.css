@@ -1,0 +1,141 @@
+.featured-products__inner {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.featured-products__one {
+    position: relative;
+    background-color: rgb(var(--raw-sienna));
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    overflow: hidden;
+    min-height: 560px;
+    background-image: url('./pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: center -170%;
+    background-size: 170%;
+}
+
+.featured-products__one img {
+    width: 170px;
+    margin: auto;
+}
+
+.product-one__content,
+.product-one__copy {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+    max-width: 350px;
+    margin: auto;
+    z-index: 2;
+}
+
+.featured-products__two {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.featured-products__two img {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.product-two__content {
+    position: relative;
+    display: grid;
+    gap: 2rem;
+    padding: 6rem 1.5rem;
+    z-index: 2;
+}
+
+.product-two__content h2 {
+    font-size: 28px;
+}
+
+.featured-products__three {
+    display: grid;
+    gap: 1rem;
+}
+
+.featured-products__three img {
+    border-radius: 8px;
+}
+
+.product-three__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    background-color: rgb(var(--seashell));
+}
+
+.product-three__content h2 {
+    font-size: 28px;
+}
+
+@media screen and (min-width: 576px) {
+    .featured-products__one {
+        padding: 4rem 2rem;
+        background-position: center 130%;
+        background-size: 125%;
+    }
+
+    .product-one__content {
+        gap: 2rem;
+    }
+
+    .product-one__content img {
+        width: 200px
+    }
+
+    .product-one__content h2 {
+        font-size: 56px;
+        line-height: 4rem;
+    }
+
+    .featured-products__three {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .featured-products__inner {
+        padding: 0;
+    }   
+
+    .featured-products__one {
+        background-image: url('./pattern-circles.svg');
+        background-repeat: no-repeat;
+        background-position: -190% 10%;
+        background-size: 90%;
+    }
+    
+
+    .product-one__content img {
+        position: relative;
+        display: block;
+        width: 375px;
+        bottom: -70px;
+    }
+    
+    .product-one__content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .product-one__copy {
+        gap: 3rem;
+    }
+}

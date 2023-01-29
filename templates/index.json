@@ -21,10 +21,27 @@
           "earphones"
         ]
       }
+    },
+    "aa76da02-3943-470f-b779-81d45a8b8b7b": {
+      "type": "featured-products",
+      "settings": {
+        "product_1_image": "shopify:\/\/shop_images\/image-speaker-zx9.png",
+        "product_1": "zx9-speaker",
+        "copy": "Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.",
+        "background_2_mobile": "shopify:\/\/shop_images\/image-speaker-zx7_89d10e1a-bec5-4196-b605-358ed741caf1.jpg",
+        "background_2_tablet": "shopify:\/\/shop_images\/image-speaker-zx7_61ab77e4-b00d-4b50-99eb-073e6993d450.jpg",
+        "background_2_desktop": "shopify:\/\/shop_images\/image-speaker-zx7.jpg",
+        "product_2": "zx7-speaker",
+        "background_3_mobile": "shopify:\/\/shop_images\/image-earphones-yx1_d6424922-db2b-4a6a-8ad6-5598974f05dc.jpg",
+        "background_3_tablet": "shopify:\/\/shop_images\/image-earphones-yx1_1c3da448-7b00-46ee-9699-15a441b3108d.jpg",
+        "background_3_desktop": "shopify:\/\/shop_images\/image-earphones-yx1_2f73e480-4713-4ce0-96c5-a3f598f531e8.jpg",
+        "product_3": "yx1-wireless-earphones"
+      }
     }
   },
   "order": [
     "3b7e9850-3c66-49a4-831c-54e7e2eff622",
-    "70e72e84-eb76-46c7-b655-7f1a8257769c"
+    "70e72e84-eb76-46c7-b655-7f1a8257769c",
+    "aa76da02-3943-470f-b779-81d45a8b8b7b"
   ]
 }
