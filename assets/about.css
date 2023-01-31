@@ -1,0 +1,42 @@
+.about__inner {
+    border-radius: 8px;
+    padding: 4rem 2rem;
+}
+
+.about__inner img {
+    border-radius: 8px;
+}
+
+.about__copy {
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+    max-width: 580px;
+    margin: 2rem auto;
+}
+
+.about__copy h2 {
+    font-size: 28px;
+}
+
+@media screen and (min-width: 576px) {
+    .about__copy h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .about__inner {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        padding: 6rem 0rem;
+    }
+
+    .about__copy {
+        order: -1;
+        text-align: left;
+        padding-right: 5rem;
+        gap: 3rem;
+    }
+}

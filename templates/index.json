@@ -37,11 +37,21 @@
         "background_3_desktop": "shopify:\/\/shop_images\/image-earphones-yx1_2f73e480-4713-4ce0-96c5-a3f598f531e8.jpg",
         "product_3": "yx1-wireless-earphones"
       }
+    },
+    "6b77aca1-132b-464a-a451-da7cae18eb1d": {
+      "type": "about",
+      "settings": {
+        "image_mobile": "shopify:\/\/shop_images\/image-best-gear.jpg",
+        "image_tablet": "shopify:\/\/shop_images\/image-best-gear_b0a4f51c-2928-4303-822b-4dfc097f4a3e.jpg",
+        "image_desktop": "shopify:\/\/shop_images\/image-best-gear_1776e463-5405-4ece-9d6a-77c5f5160e89.jpg",
+        "heading": "Bringing you the best audio gear"
+      }
     }
   },
   "order": [
     "3b7e9850-3c66-49a4-831c-54e7e2eff622",
     "70e72e84-eb76-46c7-b655-7f1a8257769c",
-    "aa76da02-3943-470f-b779-81d45a8b8b7b"
+    "aa76da02-3943-470f-b779-81d45a8b8b7b",
+    "6b77aca1-132b-464a-a451-da7cae18eb1d"
   ]
 }

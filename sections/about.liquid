@@ -1,0 +1,64 @@
+<div class="about__inner container">
+    <picture>
+        <source 
+            media="(min-width: 992px)" 
+            srcset="{{ section.settings.image_desktop.src | image_url }}">
+
+        <source 
+            media="(min-width: 576px)" 
+            srcset="{{ section.settings.image_tablet.src | image_url }}">
+
+        <img 
+            src="{{ section.settings.image_mobile.src | image_url }}" 
+            alt="{{ section.settings.image_mobile.alt }}"
+        >
+    </picture>
+
+    <div class="about__copy">
+        <h2>{{ section.settings.heading }}</h2>
+
+        <div class="text-black/50">{{ section.settings.copy }}</div>
+    </div>
+</div>
+
+{{ 'about.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "About",
+    "tag": "section",
+    "class": "about",
+    "settings": [
+        {
+            "label": "Image (mobile)",
+            "id": "image_mobile",
+            "type": "image_picker"
+        },
+        {
+            "label": "Image (tablet)",
+            "id": "image_tablet",
+            "type": "image_picker"
+        },
+        {
+            "label": "Image (desktop)",
+            "id": "image_desktop",
+            "type": "image_picker"
+        },
+        {
+            "label": "Heading",
+            "id": "heading",
+            "type": "inline_richtext"
+        },
+        {
+            "label": "Copy",
+            "id": "copy",
+            "type": "richtext"
+        }
+    ],
+    "presets": [
+        {
+            "name": "About"
+        }
+    ]
+}
+{% endschema %}

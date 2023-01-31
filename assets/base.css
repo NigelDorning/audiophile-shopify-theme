@@ -95,6 +95,10 @@ h6 {
     letter-spacing: 1px;
 }
 
+.text-black\/50 {
+    color: rgba(var(--black), .5);
+}
+
 /* Buttons */
 .button {
     display: inline-block;
@@ -145,6 +149,8 @@ h6 {
     background-color: rgb(var(--black));
     color: white;
 }
+
+
 
 /* Form Elements */
 input,
