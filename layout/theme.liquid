@@ -17,6 +17,13 @@
     <main>
         {{ content_for_layout }}
     </main>
+
+    {% if template.name != 'index' %}
+        {% section 'featured-collections' %}
+    {% endif %}
+
+    {% section 'about' %}
+
     {% section 'footer' %}
 </body>
 </html>

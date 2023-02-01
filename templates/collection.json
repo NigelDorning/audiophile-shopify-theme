@@ -1,10 +1,12 @@
 {
   "sections": {
-    "default": {
-      "type": "default"
+    "4e6550a7-3390-400c-a2f2-991f9ade8646": {
+      "type": "collection-main",
+      "settings": {
+      }
     }
   },
   "order": [
-    "default"
+    "4e6550a7-3390-400c-a2f2-991f9ade8646"
   ]
 }

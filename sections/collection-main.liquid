@@ -1,0 +1,49 @@
+<div class="collection-main__inner container">
+
+    {% for product in collection.products %}
+        <div class="product">
+            <div class="product__image">
+                <picture>
+                    <source
+                        media="(min-width: 992px)"
+                        srcset="{{ product.featured_image.src | image_url }}">
+
+                    <source
+                        media="(min-width: 576px)"
+                        srcset="{{ product.featured_image.src | image_url: height: 352 }}">
+
+                    <img
+                        src="{{ product.featured_image.src | image_url: width: 500 }}"
+                        alt="{{ product.featured_image.alt }}"
+                    >
+                </picture>
+            </div>
+
+            <div class="product__copy">
+                <h2>{{ product.title }}</h2>
+                {{ product.description }}
+                <div>
+                    <a href="{{ product.url }}" class="button">
+                        See Product
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+
+{{ 'collection-main.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Collection Main",
+    "tag": "section",
+    "class": "collection-main",
+    "presets": [
+        {
+            "name": "Collection Main"
+        }
+    ]
+}
+{% endschema %}
