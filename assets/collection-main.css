@@ -1,3 +1,11 @@
+.collection-title {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(var(--cod-gray));
+    color: white;
+    font-size: 28px;
+}
+
 .collection-main__inner {
     display: grid;
     gap: 6rem;
@@ -26,6 +34,11 @@
 }
 
 @media screen and (min-width: 992px) {
+    .collection-title{
+        font-size: 56px;
+        padding: 2rem;
+    }
+
     .collection-main__inner {
         padding: 4rem 0rem;
     }
