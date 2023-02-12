@@ -1,10 +1,12 @@
 {
   "sections": {
-    "default": {
-      "type": "default"
+    "0cb73e44-7b16-43ef-93ff-47f539d9043d": {
+      "type": "main-cart",
+      "settings": {
+      }
     }
   },
   "order": [
-    "default"
+    "0cb73e44-7b16-43ef-93ff-47f539d9043d"
   ]
 }

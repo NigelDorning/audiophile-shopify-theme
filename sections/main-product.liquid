@@ -1,0 +1,85 @@
+<div class="main-product__inner container">
+    <div class="product__main">
+        <div class="product__slider">
+            <picture>
+                <img
+                    src="{{ product.featured_image.src | image_url: width: 400 }}"
+                    alt="{{ product.featured_image.alt }}"
+                >
+            </picture>
+        </div>
+        <div class="product__copy">
+            <h1>{{ product.title }}</h1>
+            <p class="text-black/50">{{ product.description }}</p>
+            <p class="product__price">{{ product.price | money_with_currency }}</p>
+            {% form 'product', product %}
+                <select name="id">
+                    {% for variant in product.variants %}
+                        <option
+                            value="{{ variant.id }}"
+                            {% if variant == product.selected_or_first_available_variant %}
+                                selected="selected"
+                            {% endif %}
+                        >
+                            {{ variant.title }}
+                        </option>
+                    {% endfor %}
+                </select>
+                <div class="quantity-input">
+                    <button type="button" class="minus">-</button>
+                    <input type="text" name="quantity" min="1" value="1">
+                    <button type="button" class="plus">+</button>
+                </div>
+                <button class="button">Add To Cart</button>
+            {% endform %}
+        </div>
+    </div>
+
+    <div class="product__details">
+        <div class="product__features">
+            <h2>Features</h2>
+            <div class="text-black/50 featured__copy">
+                {{ product.metafields.details.features }}
+            </div>
+        </div>
+        <div class="product__includes">
+            <h2>In The Box</h2>
+            {% assign items = product.metafields.details.includes | split: '|' %}
+            <ul class="text-black/50">
+                {% for item in items %}
+                    <li>
+                        <span class="includes__qty">
+                            {{ item | slice: 0, 2 }}
+                        </span>
+                        {{ item | slice: 3, item.size }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    {% comment %}
+        1. Style quantity component
+        2. Learn how Shopify forms work
+        3. Look into the formatting of meta fields
+            1. Features needs a line break
+            2. Included items needs to be a list    
+    {% endcomment %}
+
+    {% comment %} Related Products {% endcomment %}
+</div>
+
+{{ 'main-product.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Main Product",
+    "tag": "section",
+    "class": "main-product",
+    "presets": [
+        {
+            "name": "Main Product"
+        }
+    ]
+}
+{% endschema %}
