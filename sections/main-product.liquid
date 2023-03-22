@@ -58,15 +58,17 @@
         </div>
     </div>
 
-    {% comment %}
-        1. Style quantity component
-        2. Learn how Shopify forms work
-        3. Look into the formatting of meta fields
-            1. Features needs a line break
-            2. Included items needs to be a list    
-    {% endcomment %}
+    <div class="product__gallery">
+        {% for image in product.media %}
+            {% if forloop.first %}
+                {% continue %}
+            {% endif %}
+            <picture>
+                <img src="{{ image.src | image_url }}" alt="{{ image.alt }}">
+            </picture>
+        {% endfor %}
+    </div>
 
-    {% comment %} Related Products {% endcomment %}
 </div>
 
 {{ 'main-product.css' | asset_url | stylesheet_tag }}

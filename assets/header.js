@@ -1,5 +1,5 @@
 const headerTrigger = document.querySelector('.header__trigger');
-const headerOverlay = document.querySelector('.header__overlay');
+const headerOverlay = document.querySelector('.overlay');
 const mobileMenu = document.querySelector('.header__mobile-menu');
 
 // Show mobile menu when trigger is clicked

@@ -14,9 +14,10 @@
             <li><a href="{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}
     </ul>
-    <a href="{{ routes.cart_url }}" class="header__cart">
+
+    <button class="mini-cart__trigger">
         <img src="{{ 'icon-cart.svg' | asset_url }}" alt="Cart icon">
-    </a>
+    </button>
     
     <div class="header__mobile-menu header__mobile-menu--hidden">
         <ul>
@@ -25,12 +26,24 @@
             {% endfor %}
         </ul>
     </div>
+
+    <div class="mini-cart">
+        <div class="mini-cart__header">
+            <h2 class="mini-cart__title">CART</h2>
+            <button class="mini-cart__remove-all">Remove all</button>
+        </div>
+        <div class="mini-cart__items">
+            {% comment %} Output cart items here {% endcomment %}
+        </div>
+        <a href="{{ routes.cart_url }}" class="button">Checkout</a>
+    </div>
 </div>
 
-<div class="header__overlay"></div>
+<div class="overlay"></div>
 
 {{ 'header.css' | asset_url | stylesheet_tag }}
 {{ 'header.js' | asset_url | script_tag }}
+{{ 'mini-cart.js' | asset_url | script_tag }}
 
 {% schema %}
 {

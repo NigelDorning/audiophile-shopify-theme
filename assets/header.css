@@ -11,6 +11,7 @@ header {
 }
 
 .header__inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,13 +23,12 @@ header {
     display: none;
 }
 
-.header__cart,
 .header__trigger,
 .header__brand a {
     display: flex;
 }
 
-.header__overlay {
+.overlay {
     display: none;
     position: fixed;
     left: 0;
@@ -37,6 +37,10 @@ header {
     height: 100%;
     background-color: rgba(var(--black), .75);
     z-index: 20;
+}
+
+.overlay--show {
+    display: block;
 }
 
 .header__mobile-menu {
@@ -63,6 +67,98 @@ header {
 
 .header__mobile-menu a:hover {
     background-color: rgba(var(--white), .1);
+}
+
+/* Cart */
+.mini-cart {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 120%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 420px;
+    z-index: 25;
+}
+
+.mini-cart__empty {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.mini-cart__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mini-cart__title {
+    font-size: 14px;
+}
+
+.mini-cart__remove-all {
+    cursor: pointer;
+}
+
+.mini-cart--show {
+    display: block;
+}
+
+.mini-cart__items > * + * {
+    margin-top: 1rem;
+}
+
+.mini-cart__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item__details {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 600;
+}
+
+.item__details img {
+    width: 65px;
+    border-radius: 8px;
+}
+
+.mini-cart .quantity-input {
+    font-size: 13px;
+}
+
+.mini-cart .quantity-input input {
+    width: 40px;
+    text-align: center;
+    background-color: rgb(var(--seashell));
+    border-radius: 0;
+    padding: .25rem;
+    font-size: 13px;
+}
+
+.mini-cart .quantity-input button {
+    padding: .25rem .75rem;
+    background-color: rgb(var(--seashell));
+}
+
+.mini-cart a.button {
+    display: block;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.mini-cart .item__actions {
+    display: flex;
+    align-items: center;
+}
+
+.mini-cart .item__remove {
+    padding: .5rem;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 576px) {
