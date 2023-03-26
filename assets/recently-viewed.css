@@ -1,0 +1,21 @@
+.recently-viewed__inner {
+    padding: 4rem 0;
+}
+
+.recently-viewed__title {
+    margin-bottom: 2rem;
+}
+
+.recently-viewed__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.recently-viewed__item img {
+    border-radius: 8px;
+}
+
+.recently-viewed__item h2 {
+    font-size: 1.25rem;
+}

@@ -1,4 +1,4 @@
-<div class="main-product__inner container">
+<div class="main-product__inner container" data-product-handle="{{ product.title | handle }}">
     <div class="product__main">
         <div class="product__slider">
             <picture>
@@ -72,6 +72,7 @@
 </div>
 
 {{ 'main-product.css' | asset_url | stylesheet_tag }}
+{{ 'main-product.js' | asset_url | script_tag }}
 
 {% schema %}
 {

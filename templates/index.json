@@ -37,11 +37,17 @@
         "background_3_desktop": "shopify:\/\/shop_images\/image-earphones-yx1_2f73e480-4713-4ce0-96c5-a3f598f531e8.jpg",
         "product_3": "yx1-wireless-earphones"
       }
+    },
+    "54a91af2-b394-4674-92a8-5a6526c0b068": {
+      "type": "recently-viewed",
+      "settings": {
+      }
     }
   },
   "order": [
     "3b7e9850-3c66-49a4-831c-54e7e2eff622",
     "70e72e84-eb76-46c7-b655-7f1a8257769c",
-    "aa76da02-3943-470f-b779-81d45a8b8b7b"
+    "aa76da02-3943-470f-b779-81d45a8b8b7b",
+    "54a91af2-b394-4674-92a8-5a6526c0b068"
   ]
 }

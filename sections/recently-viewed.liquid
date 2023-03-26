@@ -1,0 +1,20 @@
+<div class="recently-viewed__inner container">
+    <h2 class="recently-viewed__title">Recently Viewed</h2>
+    <div class="recently-viewed__items"></div>
+</div>
+
+{{ 'recently-viewed.css' | asset_url | stylesheet_tag }}
+{{ 'recently-viewed.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+    "name": "Recently Viewed",
+    "tag": "section",
+    "class": "recently-viewed",
+    "presets": [
+        {
+            "name": "Recently Viewed"
+        }
+    ]
+}
+{% endschema %}
