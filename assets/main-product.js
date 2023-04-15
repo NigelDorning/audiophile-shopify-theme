@@ -10,8 +10,12 @@ const productHandle = document.querySelector('.main-product__inner').dataset.pro
 // Check to see if the current product is not already in viewedProducts
 // Add current product to local storage
 if (!viewedProducts.includes(productHandle)) {
-    // Insert handle to the viewedProducts array
-    viewedProducts.push(productHandle);
+    // Insert handle to the beginning of the viewedProducts array
+    viewedProducts.unshift(productHandle);
+    // If the viewed products array has more then three items then remove the last one
+    if (viewedProducts.length > 3) {
+        viewedProducts.pop();
+    }
     // Set local storage item
     localStorage.setItem('viewed-products', JSON.stringify(viewedProducts));
 }
